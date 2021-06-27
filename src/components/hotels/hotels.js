@@ -6,9 +6,9 @@ class Hotels extends Component {
     render() {
         return (
              <div className={styles.hotels}>
-                 
-                <Hotel/>
-                <Hotel/>
+                {this.props.hotels.map(hotel => <Hotel {...hotel}/>)}
+                {/* <Hotel/>
+                <Hotel/> */}
              </div>
         );
     }

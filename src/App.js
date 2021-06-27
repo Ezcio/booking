@@ -6,31 +6,31 @@ import React, { Component } from 'react';
 
 class App extends Component {
 
-    // state = {
-    //   hotels: [
-    //     {
-    //       id:1,
-    //       name: 'Pod akacjami',
-    //       city: 'Warszawa',
-    //       description: 'lorem ipsum',
-    //       image:''
-    //     },
-    //     {
-    //       id:2, 
-    //       name: 'Debowy',
-    //       city: 'bialystok',
-    //       description: 'lorem ipsum',
-    //       image:''
-    //     }
-    //   ]
-    // }
+    state = {
+      hotels: [
+        {
+          id:1,
+          name: 'Pod akacjami',
+          city: 'Warszawa',
+          description: 'lorem ipsum',
+          image:''
+        },
+        {
+          id:2, 
+          name: 'Debowy',
+          city: 'bialystok',
+          description: 'lorem ipsum',
+          image:''
+        }
+      ]
+    }
 
   render (){
     return (
       <div className="App">
         <Header/>
         <Menu/>
-        <Hotels/>
+        <Hotels hotels={this.state.hotels}/>
       </div>
     );
   }

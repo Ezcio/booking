@@ -12,9 +12,9 @@ function Hotel(props){
             </div>  
 
             <div className={styles.informationSection}>
-                <h1>Name Hotel</h1>
-                <p>Miasto</p>
-                <p>Opis</p>
+                <h1>{props.name}</h1>
+                <p>{props.city}</p>
+                <p>{props.description}</p>
             </div> 
 
             <div className={styles.clickToKnowMoreAboutTheHotel}>
