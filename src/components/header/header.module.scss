@@ -1,0 +1,51 @@
+$var: white;
+.header{
+    height:10vh;
+    width: 100vw;
+    background-color: $var;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* flex-direction: column; */
+}
+/* .inputSearch{
+    width: 300px;
+    
+} */
+header .logo {
+    width: 40%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.nameBrand{
+    
+    /* font-size:50px;
+    color: white;
+    letter-spacing: 7px;
+    font-family: cursive; */
+    /* background: url(../../assets/images/image1.jpg); */
+    
+   
+}
+.buttonSearch{
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    color: $var;
+    font-size: 1.4rem;
+}
+.searchPlace{
+    display: flex;
+    flex-direction: row;
+    margin-right: 3rem;
+}
+.header img {
+    background: url('../../assets/images/logo.png');
+    height: 100%;
+    width: 20%;
+    margin-left: 2.5rem;
+}

@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import  Header from './components/header/header.js' //to jest z wykorzystaniem export default
+import './App.scss';
+import {Menu} from './components/menu/menu.js' //to jest z wykorzystaniem exportowaniem poszczegolnej czesci
+import Hotels from './components/hotels/hotels'
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+    // state = {
+    //   hotels: [
+    //     {
+    //       id:1,
+    //       name: 'Pod akacjami',
+    //       city: 'Warszawa',
+    //       description: 'lorem ipsum',
+    //       image:''
+    //     },
+    //     {
+    //       id:2, 
+    //       name: 'Debowy',
+    //       city: 'bialystok',
+    //       description: 'lorem ipsum',
+    //       image:''
+    //     }
+    //   ]
+    // }
+
+  render (){
+    return (
+      <div className="App">
+        <Header/>
+        <Menu/>
+        <Hotels/>
+      </div>
+    );
+  }
 }
 
 export default App;
+
+//default robi to ze w momencie importowania go jestesmy nadac nazwe jaka nam sie podoba 
