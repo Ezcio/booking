@@ -1,6 +1,17 @@
 import react from 'react'
 import styles from './hotel.module.css'
 import image1 from '../../../assets/images/image1.jpg'
+import PropTypes from 'prop-types';
+
+
+const propTypes = {
+    name: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
+
+}
+
+
 function Hotel(props){
     return(
         <div className={styles.hotel}>
@@ -28,5 +39,7 @@ function Hotel(props){
         </div>
     )
 }
+
+Hotel.propTypes = propTypes
 
 export default Hotel

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from'./header.module.scss'
 import SearchBar from './searchbar/searchbar';
 import img from '../../assets/images/logo.png'
-function Header(){
+function Header(props){
 
     const [term, setTerm] = useState();
 
@@ -18,7 +18,7 @@ function Header(){
                 <img src={img}></img>
             </div>
             <div className={styles.searchPlace}>
-                <SearchBar/>
+                <SearchBar onSearch={props.onSearch}/>
             </div>
         </header>
     )

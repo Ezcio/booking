@@ -1,10 +1,17 @@
-
+import PropTypes from 'prop-types'
 import React, {useState} from 'react'
-function SearchBar(){
+
+const propTypes = {
+    onSearch: PropTypes.func.isRequired
+}
+
+function SearchBar(props){
+    
     const [term, setTerm] = useState('');
 
     const search = () =>{
         console.log(term)
+        props.onSearch(term)
     }
     const onKeyHandler = (e) =>{
         if (e.key == 'Enter'){
@@ -36,5 +43,5 @@ function SearchBar(){
     </div>    
     )
 }
-
+SearchBar.propTypes = propTypes
 export default SearchBar
