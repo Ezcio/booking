@@ -1,36 +1,27 @@
 $var: white;
 .header{
-    height:10vh;
+    height:30vh;
     width: 100vw;
-    background-color: $var;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    
-    /* flex-direction: column; */
-}
-/* .inputSearch{
-    width: 300px;
-    
-} */
-header .logo {
-    width: 40%;
-    height: 100%;
-    
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-.nameBrand{
-    
-    /* font-size:50px;
+    position: relative;
     color: white;
-    letter-spacing: 7px;
-    font-family: cursive; */
-    /* background: url(../../assets/images/image1.jpg); */
     
-   
 }
+
+.headerBackground{
+    background: url('../../assets/images/headerImage.jpg') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -5%;
+    bottom: -5%;
+    left: -5%;
+    right: -5%;
+    z-index: -1;
+}
+
 .buttonSearch{
     border-radius: 8px;
     border: none;
@@ -40,8 +31,8 @@ header .logo {
 }
 .searchPlace{
     display: flex;
-    flex-direction: row;
-    margin-right: 3rem;
+    align-items: center;
+    
 }
 .header img {
     background: url('../../assets/images/logo.png');

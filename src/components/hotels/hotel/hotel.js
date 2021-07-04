@@ -1,8 +1,9 @@
-import react from 'react'
+import react, { useContext } from 'react'
 import styles from './hotel.module.css'
 import image1 from '../../../assets/images/image1.jpg'
 import PropTypes from 'prop-types';
-
+import ChangeThemContext from '../../../context/changeThemContext';
+import React from 'react';
 
 const propTypes = {
     name: PropTypes.string.isRequired,
@@ -13,6 +14,9 @@ const propTypes = {
 
 
 function Hotel(props){
+    
+    const changeThemContext = useContext(ChangeThemContext)
+
     return(
         <div className={styles.hotel}>
             <div className={styles.imageSection}>
@@ -33,7 +37,7 @@ function Hotel(props){
 
                 </div>
                 <div className={styles.buttonInformation}>
-                    <button>Click to Know More</button>
+                    <button className={`btn btn-${changeThemContext.colorButton}`}>Click to Know More</button>
                 </div>
             </div>
         </div>

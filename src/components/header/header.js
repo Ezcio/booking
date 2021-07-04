@@ -1,24 +1,20 @@
 import React, { useState } from 'react';
 import styles from'./header.module.scss'
-import SearchBar from './searchbar/searchbar';
-import img from '../../assets/images/logo.png'
+import withMousePosition from '../../Hoc/withMousePosition';
+import headerImage from '../../assets/images/headerImage.jpg'
+
 function Header(props){
 
-    const [term, setTerm] = useState();
-
-    const search = () =>{
-        console.log('szukaj czegos tam')
+    const paralaxStyles = {
+        transform: `translate(${props.mouseX / 500}px, ${props.mouseY / 500}px)`
     }
     return (
         //There is way add two class in one marker/tag very useful
         // <header className={`${styles.header} container`}> 
-        <header className={styles.header}> 
-            <div className={styles.logo}>
-                {/* <h1 className={styles.nameBrand}>Logos</h1> */}
-                <img src={img}></img>
-            </div>
+        <header className={styles.header} style={{color:'white'}}> 
+            <div className={styles.headerBackground} style={paralaxStyles}></div>
             <div className={styles.searchPlace}>
-                <SearchBar onSearch={props.onSearch}/>
+                {props.children}
             </div>
         </header>
     )
@@ -26,4 +22,4 @@ function Header(props){
 
 
 
-export default Header  
+export default withMousePosition(Header)  
